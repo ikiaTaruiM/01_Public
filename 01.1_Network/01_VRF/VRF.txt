@@ -1,0 +1,72 @@
+⚪︎ TASK 1
+
+R1
+interface e0/0
+ ip address 192.168.1.254 255.255.255.0
+ ip vrf forwarding cu-red
+
+R2
+interface e0/0
+ ip address 192.168.2.254 255.255.255.0
+ ip vrf forwardint cu-red
+
+
+⚪︎ TASK 2
+
+R1
+interface e0/1
+ ip address 192.168.20.254 255.255.255.0
+ ip vrf forwarding cu-red
+
+R2
+interface e0/1
+ ip address 192.168.22.254 255.255.255.0
+ ip vrf forwardint cu-red
+
+
+⚪︎ TASK 3
+
+R1
+interface e0/2.100
+ ip vrf forwarding cu-red
+ ip address 10.10.10.1 255.255.255.252
+
+interface e0/2.200
+ ip vrf forwarding cu-green
+ ip address 10.10.20.1 255.255.255.252
+
+router bgp 65000
+ address-family ipv4 cu-green
+  redistribute connected
+  neighbor 10.10.20.2 remote-as 65000
+  neighbor 10.10.20.2 activate
+ exit-address-family
+
+ address-family ipv4 cu-red 
+  redistibute connected
+  neighbor 10.10.10.2 remote-as 65000
+  neibhbor 10.10.10.2 acrivate
+ exit-address-family
+
+R2
+interface e0/2.100
+ ip vrf forwarding cu-red
+ ip address 10.10.10.1 255.255.255.252
+
+interface e0/2.100
+ ip vrf forwarding cu-green
+ ip address 10.10.20.1 255.255.255.252
+
+router bgp 65000
+ address-family ipv4 cu-green
+  redistribute connected
+  neighbor 10.10.20.1 remote-as 65000
+  neighbor 10.10.20.1 activate
+ exit-address-family
+ 
+ address-family ipv4 cu-red
+  redistribute connected
+  neighbor 10.10.10.1 remote-as 65000
+  neighbor 10.10.20.1 activate
+ exit-address-family
+ 
