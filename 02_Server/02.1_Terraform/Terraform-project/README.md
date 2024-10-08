@@ -3,12 +3,12 @@
  Terraformを使用したIaCに興味があったため、自己学習にて作成したtfファイルを掲載いたします。
 
 
-Terraform version:
+**Terraform version:**
 ```
 1.9.3
 ```
 
-Environment:
+**Environment:**  
 ```
 Microsoft Azure
 _source  - hashicorp/azurerm"
