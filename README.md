@@ -12,13 +12,11 @@ SIerとして医療および公共案件に従事してきました。
 
 
 ## 主な取得資格
-```
-Python3エンジニア認定基礎試験
-CCNA
-CCNP Enterprise
-_CCNP ENARSI
-_CCNP ENCOR
-AWS Certified Solution Architect - Associate
-Google Cloud認定 Cloud Digital Leader
-TOEIC Score 750
-```
+**Python3エンジニア認定基礎試験**
+**CCNA**
+**CCNP Enterprise**
+**_CCNP ENARSI**
+**_CCNP ENCOR**
+**AWS Certified Solution Architect - Associate**
+**Google Cloud認定 Cloud Digital Leader**
+**TOEIC Score 750**
