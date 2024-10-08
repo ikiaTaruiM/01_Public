@@ -5,7 +5,7 @@
 
 Terraform version:
 ```
-**1.9.3**
+1.9.3
 ```
 
 Environment:
@@ -13,5 +13,4 @@ Environment:
 Microsoft Azure
 _source  - hashicorp/azurerm"
 _version - 3.0 
-
 ```
